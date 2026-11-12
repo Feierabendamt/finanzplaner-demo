@@ -1,1 +1,153 @@
-<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#244b3b"><title>Feierabendamt | Finanzplaner 2027 testen</title><style>:root{font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#234536;background:#f3eee3}*{box-sizing:border-box}body{margin:0}.wrap{max-width:760px;margin:auto;padding:24px 16px 50px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-weight:850;letter-spacing:.03em;font-size:21px}.pill{background:#dce8da;color:#315742;padding:7px 12px;border-radius:40px;font-size:12px;font-weight:750}h1{font-size:clamp(29px,6vw,43px);line-height:1.13;margin:34px 0 12px}p{line-height:1.55;color:#566b5d}.lead{font-size:16px;max-width:610px}.card{background:#e7e6d6;border:1px solid #cbd4c4;border-radius:22px;padding:21px;margin-top:19px}.card h2{font-size:19px;margin:0 0 7px}.hint{font-size:13px;margin:0 0 20px}.fields{display:grid;gap:15px}.field{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.field label{font-size:15px;font-weight:700}.inputwrap{display:flex;align-items:center;background:#f8f4e9;border:1.5px solid #a6b7a6;border-radius:12px;overflow:hidden}.inputwrap input{width:116px;padding:12px 9px 12px 14px;font:700 18px system-ui;color:#244b3b;border:0;background:transparent;text-align:right;outline:none}.inputwrap:focus-within{outline:3px solid #a3bfa6}.euro{padding-right:13px;font-weight:700}.result{background:#244b3b;color:#f9f3e6;border-radius:22px;padding:23px;margin-top:19px}.result .eyebrow{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:#cbdcc8}.amount{font-size:clamp(34px,9vw,53px);font-weight:850;letter-spacing:-.035em;margin:7px 0}.result p{color:#e0e9dd;margin:0}.kpis{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:15px}.kpi{background:#f8f4e9;border-radius:16px;padding:15px}.kpi span{display:block;font-size:12px;color:#657769;margin-bottom:6px}.kpi strong{font-size:22px}.bar{height:13px;background:#d7d8c9;border-radius:20px;overflow:hidden;margin-top:12px}.bar div{height:100%;background:#8fae94;transition:width .2s}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}.btn{border:0;border-radius:13px;padding:13px 17px;font-weight:800;font-size:14px;cursor:pointer}.primary{background:#244b3b;color:white}.secondary{background:#d7dfd0;color:#244b3b}.small{font-size:12px;color:#647467}.note{background:#f0dac6;border-radius:14px;padding:13px 15px;font-size:13px;line-height:1.5;margin-top:18px}.footer{font-size:12px;margin-top:25px;color:#617467}a{color:inherit}@media(max-width:420px){.wrap{padding:19px 13px 35px}.card{padding:17px}.field{align-items:stretch}.field label{flex:1;align-self:center}.inputwrap input{width:100px}.brand{font-size:19px}}</style></head><body><main class="wrap"><div class="top"><div class="brand">✦ Feierabendamt</div><div class="pill">KOSTENLOSE DEMO</div></div><h1>Alleinerziehend: Was bleibt dir am Monatsende wirklich übrig?</h1><p class="lead">Wenn du dein Familienbudget allein organisierst, zählt jeder Euro. Teste mit Beispielwerten, wie sich Einkommen, tatsächlich erhaltener Kindesunterhalt und Lebensmittelkosten auf deinen Monat auswirken. Ohne Anmeldung und ohne Excel.</p><section class="card"><h2>1. Verändere die Beispielwerte</h2><p class="hint">Alle Angaben sind fiktiv und nur für diese Demo gedacht.</p><div class="fields"><div class="field"><label for="salary">Nettoeinkommen</label><div class="inputwrap"><input id="salary" type="number" min="0" max="100000" step="10" value="1750" inputmode="decimal"><span class="euro">€</span></div></div><div class="field"><label for="support">Kindesunterhalt erhalten</label><div class="inputwrap"><input id="support" type="number" min="0" max="100000" step="10" value="500" inputmode="decimal"><span class="euro">€</span></div></div><div class="field"><label for="expected">Kindesunterhalt laut Titel / Vereinbarung</label><div class="inputwrap"><input id="expected" type="number" min="0" max="100000" step="10" value="700" inputmode="decimal"><span class="euro">€</span></div></div><div class="field"><label for="food">Lebensmittelbudget</label><div class="inputwrap"><input id="food" type="number" min="0" max="100000" step="10" value="350" inputmode="decimal"><span class="euro">€</span></div></div></div><div class="support-gap" aria-live="polite" style="background:#f0dac6;border-radius:14px;padding:14px 16px;margin-top:18px"><strong>Differenz beim Kindesunterhalt in diesem Monat: <span id="supportgap">200,00 €</span></strong><p id="gapmessage" style="margin:6px 0 0;font-size:13px;color:#334c3d">Dieser Betrag fehlt gegenüber dem vereinbarten oder titulierten Betrag und ist im Monatsbudget nicht verfügbar.</p></div><p class="small">Weitere angenommene Werte: 259 € Familienleistungen, 1.650 € sonstige Ausgaben (z. B. Miete, Betreuung, Verträge und weitere Alltagskosten).</p></section><section class="result" aria-live="polite"><div class="eyebrow">2. Dein simuliertes Monatsergebnis</div><div class="amount" id="balance">509,00 €</div><p id="message">Nach den angenommenen Ausgaben bleibt Geld übrig.</p></section><div class="kpis"><div class="kpi"><span>Einnahmen gesamt</span><strong id="income">2.509 €</strong></div><div class="kpi"><span>Ausgaben gesamt</span><strong id="expenses">2.000 €</strong></div></div><section class="card"><h2>3. So verändert sich dein Budget</h2><p class="hint">Anteil deiner Ausgaben an den Einnahmen</p><div class="bar"><div id="barfill" style="width:80%"></div></div><p class="small" id="ratio">80 % deiner Einnahmen sind verplant.</p><div class="actions"><button class="btn secondary" id="reset" type="button">↺ Beispiel zurücksetzen</button></div></section><div class="note"><strong>Für alle, die Familienfinanzen allein stemmen.</strong><p style="margin:8px 0 10px;color:#334c3d">Wenn du alleinerziehend bist, planst du nicht nur Miete und Einkäufe. Du behältst auch Kindesunterhalt, Familienleistungen, Betreuung und die Kosten für dein Kind im Blick. Genau dafür wurde der <strong>Feierabendamt Familienfinanzplaner 2027</strong> entwickelt.</p><ul style="margin:0;padding-left:20px;color:#334c3d"><li><strong>Deine Familienrealität:</strong> Unterhalt, Kindergeld, OGS, Schulessen und Nachhilfe getrennt erfassen</li><li><strong>Mehr als ein Monatswert:</strong> zwölf Monate, Fixkosten, Haushaltsbuch und Dashboard übersichtlich verbinden</li><li><strong>Wenn es eng wird:</strong> offene Rechnungen, Raten und mögliche Veränderungen in Ruhe durchrechnen</li></ul><p style="margin:10px 0 0;color:#334c3d"><strong>Du trägst die Verantwortung. Den Überblick musst du nicht allein im Kopf behalten.</strong></p></div><div class="actions"><a class="btn primary" style="text-decoration:none;display:inline-block" href="https://feierabendamtshop.etsy.com/listing/4613584081" target="_blank" rel="noopener noreferrer">Finanzplaner für Alleinerziehende ansehen · 19,90 €</a></div><p class="footer">Feierabendamt · Demo mit fiktiven Werten · Keine Finanzberatung. Deine Eingaben bleiben in diesem Browserfenster und werden nicht übertragen.</p></main><script>const ids=['salary','support','expected','food'],els=ids.map(id=>document.getElementById(id)),fmt=new Intl.NumberFormat('de-DE',{style:'currency',currency:'EUR'});function update(){const [salary,support,expected,food]=els.map(e=>Math.max(0,Number(e.value)||0)),gap=Math.max(0,expected-support),income=salary+support+259,expenses=food+1650,balance=income-expenses,ratio=income>0?expenses/income*100:0;document.getElementById('supportgap').textContent=fmt.format(gap);document.getElementById('gapmessage').textContent=gap>0?'Dieser Betrag fehlt gegenüber dem vereinbarten oder titulierten Betrag und ist im Monatsbudget nicht verfügbar. Berechnet wird nur mit tatsächlich erhaltenem Unterhalt.':'Kein Fehlbetrag für diesen Monat. Für das Budget zählt nur der tatsächlich erhaltene Unterhalt.';document.getElementById('balance').textContent=fmt.format(balance);document.getElementById('message').textContent=balance<0?'Deine angenommenen Ausgaben übersteigen die Einnahmen.':balance===0?'Dein Budget ist rechnerisch ausgeglichen.':'Nach den angenommenen Ausgaben bleibt Geld übrig.';document.getElementById('income').textContent=fmt.format(income);document.getElementById('expenses').textContent=fmt.format(expenses);document.getElementById('barfill').style.width=Math.min(100,ratio)+'%';document.getElementById('ratio').textContent=income>0?Math.round(ratio)+' % deiner Einnahmen sind verplant.':'Ohne Einnahmen ist keine Prozentberechnung möglich.'}els.forEach(e=>e.addEventListener('input',update));document.getElementById('reset').addEventListener('click',()=>{[1750,500,700,350].forEach((v,i)=>els[i].value=v);update()});update();</script></body></html>
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#1F3B34">
+<title>Feierabendamt | Finanzplaner 2027 testen</title>
+<style>
+:root{--g:#1F3B34;--g2:#35594A;--g3:#6B8A74;--cream:#F2E8DE;--ap:#E8B79A;--ink:#2B2B2B;--paper:#FBF7F1;--line:#d9cfc2}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:720px;margin:0 auto;padding:22px 16px 48px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.brand{font:700 20px Georgia,"Times New Roman",serif;color:var(--g)}
+.pill{background:var(--ap);color:var(--g);font-size:13px;font-weight:700;padding:5px 12px;border-radius:20px}
+h1{font:700 clamp(28px,6vw,40px)/1.15 Georgia,"Times New Roman",serif;color:var(--g);margin:28px 0 10px}
+.lead{max-width:600px;margin:0 0 20px}
+.hero{background:var(--g);color:var(--cream);border-radius:18px;padding:22px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.chip{border:1px solid var(--g3);background:transparent;color:var(--cream);border-radius:20px;padding:8px 15px;font:600 14px system-ui;cursor:pointer}.chip[aria-pressed="true"]{background:var(--ap);color:var(--g);border-color:var(--ap)}.chip:focus-visible{outline:3px solid var(--ap);outline-offset:2px}
+.hero .lab{font-size:14px;color:#d5e0d3}
+.big{font:700 clamp(40px,11vw,60px)/1.05 Georgia,serif;margin:6px 0 4px}
+.aha{background:var(--ap);color:var(--g);border-radius:12px;padding:12px 14px;margin-top:14px;font-weight:600}
+.aha span{font-weight:400;display:block;font-size:14px;margin-top:3px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:18px;margin-top:16px}
+h2{font:700 20px Georgia,serif;color:var(--g);margin:0 0 4px}
+.hint{font-size:14px;color:#5b6a60;margin:0 0 14px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.f label{display:block;font-size:14px;font-weight:600;margin-bottom:4px}
+.f small{display:block;font-size:12px;color:#5b6a60;margin-top:3px}
+.in{display:flex;align-items:center;background:#fff;border:1.5px solid var(--g3);border-radius:10px}
+.in:focus-within{outline:3px solid var(--ap)}
+.in input{width:100%;min-width:0;border:0;background:transparent;padding:10px 4px 10px 12px;font:700 17px system-ui;text-align:right;color:var(--g);outline:none}
+.in b{padding:0 11px 0 4px;color:var(--g2)}
+.six{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:420px}
+th,td{padding:8px 6px;text-align:right;border-bottom:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left}
+th{font-weight:700;color:var(--g2)}
+tr.sel td{background:#efe2d3;font-weight:700}
+.neg{color:#9a3b2a;font-weight:700}
+.btn{border:0;border-radius:12px;padding:12px 16px;font:700 15px system-ui;cursor:pointer}
+.sec{background:#e0e6dc;color:var(--g)}
+.pri{background:var(--g);color:#fff;text-decoration:none;display:inline-block}
+.more{background:var(--paper);border-left:5px solid var(--ap);border-radius:10px;padding:16px;margin-top:22px}
+.more ul{margin:8px 0 12px;padding-left:20px}
+.small{font-size:12px;color:#5b6a60;margin-top:22px}
+@media(max-width:420px){.grid{grid-template-columns:1fr}.six{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<div class="top"><div class="brand">Feierabendamt</div><div class="pill">Kostenlose Demo</div></div>
+<h1>Was bleibt dir übrig, wenn der Unterhalt ausbleibt?</h1>
+<p class="lead">Kostenlose, vereinfachte Vorschau: Teste mit Beispielwerten, wie sich fehlender Kindesunterhalt auf dein Monatsbudget auswirkt. Die Excel-Vollversion plant alle zwölf Monate 2027. Ohne Anmeldung, ohne Excel.</p>
+
+<section class="hero" aria-live="polite">
+<div class="lab">Ergebnis für den Monat</div>
+<div class="chips" id="chips" role="group" aria-label="Monat wählen"></div>
+<div class="lab" style="margin-top:12px">Rechnerischer Monatsrest nach Rücklagen</div>
+<div class="big" id="free">0 €</div><div class="lab">Einnahmen einschließlich tatsächlich erhaltenem Unterhalt, abzüglich Ausgaben und geplanter Rücklagen. Kein garantierter frei verfügbarer Betrag.</div>
+<div class="aha"><div id="aha"></div><span id="aha2"></span></div>
+</section>
+
+<section class="card">
+<h2>1. Einnahmen und Ausgaben pro Monat</h2>
+<p class="hint">Alle Werte sind fiktiv. Ändere sie so, wie sie bei dir aussehen.</p>
+<div class="grid">
+<div class="f"><label for="net">Netto aus Arbeit</label><div class="in"><input id="net" type="number" min="0" step="10" value="1850" inputmode="decimal"><b>€</b></div></div>
+<div class="f"><label for="kg">Kindergeld</label><div class="in"><input id="kg" type="number" min="0" step="1" value="259" inputmode="decimal"><b>€</b></div><small>Fiktiver Beispielwert. Bitte den für dich geltenden Betrag laut Bescheid eintragen.</small></div>
+<div class="f"><label for="wg">Wohngeld / Kinderzuschlag</label><div class="in"><input id="wg" type="number" min="0" step="10" value="150" inputmode="decimal"><b>€</b></div></div>
+<div class="f"><label for="exp">Unterhalt laut Titel</label><div class="in"><input id="exp" type="number" min="0" step="10" value="500" inputmode="decimal"><b>€</b></div></div>
+<div class="f"><label for="fix">Fixkosten</label><div class="in"><input id="fix" type="number" min="0" step="10" value="1335" inputmode="decimal"><b>€</b></div><small>Miete, Verträge, Betreuung, Raten</small></div>
+<div class="f"><label for="var">Variable Ausgaben</label><div class="in"><input id="var" type="number" min="0" step="10" value="640" inputmode="decimal"><b>€</b></div><small>Lebensmittel, Fahrten, Kind, Sonstiges</small></div>
+<div class="f"><label for="res">Rücklagen pro Monat</label><div class="in"><input id="res" type="number" min="0" step="10" value="170" inputmode="decimal"><b>€</b></div></div>
+</div>
+</section>
+
+<section class="card">
+<h2>2. Was ist wirklich eingegangen?</h2>
+<p class="hint">Trage ein, wie viel Kindesunterhalt pro Monat tatsächlich eingegangen ist. Fehlbeträge und Mehrzahlungen werden hier getrennt gezeigt und nicht miteinander verrechnet.</p>
+<div class="six" id="six"></div>
+</section>
+
+<section class="card">
+<h2>3. Dein Verlauf</h2>
+<div class="tw"><table><thead><tr><th>Monat</th><th>Erwartet</th><th>Erhalten</th><th>Fehlbetrag gesamt</th><th>Monatsrest</th></tr></thead><tbody id="rows"></tbody></table></div>
+<p class="hint" style="margin:10px 0 0">„Fehlbetrag gesamt“ addiert ausschließlich Monate, in denen weniger als der erwartete Unterhalt eingegangen ist. Mehrzahlungen werden nicht gegengerechnet. Das ist eine vereinfachte Budgetbetrachtung, keine Berechnung rechtlich bestehender Unterhaltsrückstände oder deren Verrechnung.</p>
+<div style="margin-top:14px"><button class="btn sec" id="reset" type="button">Beispiel zurücksetzen</button></div>
+</section>
+
+<div class="more">
+<strong>Die Excel-Vollversion für das gesamte Jahr 2027</strong><p class="hint">Diese Demo ist ein vereinfachter Unterhalts- und Budgettest für sechs Beispielmonate, keine Probeversion der Excel-Datei. Die Vollversion bietet zusätzlich:</p>
+<ul>
+<li>Zwölf Monate mit Dashboard und Diagrammen, auch für einen einzelnen Monat</li>
+<li>Haushaltsbuch für jeden Einkauf, mit Soll-Ist-Vergleich</li>
+<li>Fixkosten einzeln erfassen: Miete, OGS, Schulessen, Nachhilfe und mehr</li>
+<li>Blatt „Wenn das Geld knapp wird" für offene Rechnungen und Raten</li>
+</ul>
+<p style="margin:0 0 14px"><strong>Du trägst die Verantwortung. Den Überblick musst du nicht allein im Kopf behalten.</strong></p>
+<a class="btn pri" href="https://feierabendamtshop.etsy.com/listing/4613584081" target="_blank" rel="noopener noreferrer">Finanzplaner für Alleinerziehende ansehen, 19,90 €</a>
+</div>
+
+<p class="small">Feierabendamt. Vereinfachte Demo mit fiktiven Werten, keine Finanz- oder Rechtsberatung. Der Rechner ermittelt keine rechtlich durchsetzbaren Unterhaltsansprüche. Deine Eingaben werden nur lokal in diesem geöffneten Browserfenster verarbeitet und nicht an uns übertragen.</p>
+</main>
+
+<script>
+var M=["Jan","Feb","Mär","Apr","Mai","Jun"];
+var DEF={net:1850,kg:259,wg:150,exp:500,fix:1335,var:640,res:170};
+var REC=[500,500,500,500,500,250];
+var fmt=new Intl.NumberFormat("de-DE",{style:"currency",currency:"EUR",maximumFractionDigits:0});
+var ids=["net","kg","wg","exp","fix","var","res"];
+var el={};ids.forEach(function(i){el[i]=document.getElementById(i)});
+var chips=document.getElementById("chips"),six=document.getElementById("six"),recEls=[],chipEls=[],cur=0;
+M.forEach(function(m,i){
+  var c=document.createElement("button");c.type="button";c.className="chip";c.textContent=m;c.addEventListener("click",function(){cur=i;update()});chips.appendChild(c);chipEls.push(c);
+  var d=document.createElement("div");d.className="f";
+  d.innerHTML='<label for="r'+i+'">'+m+'</label><div class="in"><input id="r'+i+'" type="number" min="0" step="10" value="'+REC[i]+'" inputmode="decimal"><b>€</b></div>';
+  six.appendChild(d);recEls.push(d.querySelector("input"));
+});
+function v(e){return Math.max(0,Number(e.value)||0)}
+function update(){
+  var base=v(el.net)+v(el.kg)+v(el.wg)-v(el.fix)-v(el["var"]);
+  var res=v(el.res),exp=v(el.exp),sel=cur,missing=0,extra=0,html="";
+  var sel_rec=0,sel_missing=0,sel_extra=0,sel_free=0;
+  for(var i=0;i<6;i++){
+    var rec=v(recEls[i]);missing+=Math.max(0,exp-rec);extra+=Math.max(0,rec-exp);
+    var free=base+rec-res;
+    html+='<tr'+(i===sel?' class="sel"':'')+'><td>'+M[i]+'</td><td>'+fmt.format(exp)+'</td><td>'+fmt.format(rec)+'</td><td>'+fmt.format(missing)+'</td><td'+(free<0?' class="neg"':'')+'>'+fmt.format(free)+'</td></tr>';
+    if(i===sel){sel_rec=rec;sel_missing=missing;sel_extra=extra;sel_free=free}
+  }
+  document.getElementById("rows").innerHTML=html;
+  chipEls.forEach(function(c,i){c.setAttribute("aria-pressed",i===cur?"true":"false")});
+  var f=document.getElementById("free");
+  f.textContent=fmt.format(sel_free);
+  document.getElementById("aha").textContent=base>=0
+    ?"Ohne Unterhalt blieben dir "+fmt.format(base)+" (vor Rücklagen)."
+    :"Ohne Unterhalt fehlen dir "+fmt.format(-base)+" im Monat (vor Rücklagen).";
+  var t="Im "+M[sel]+" sind "+fmt.format(sel_rec)+" Kindesunterhalt eingegangen. Kumulierte Fehlbeträge: "+fmt.format(sel_missing)+".";
+  if(sel_extra>0){t+=" Mehrzahlungen in anderen Monaten: "+fmt.format(sel_extra)+" (nicht verrechnet)."}
+  if(sel_free<0){t+=" Achtung: Der berechnete Monatsrest ist negativ."}
+  document.getElementById("aha2").textContent=t;
+}
+ids.forEach(function(i){el[i].addEventListener("input",update)});
+recEls.forEach(function(e){e.addEventListener("input",update)});
+document.getElementById("reset").addEventListener("click",function(){
+  ids.forEach(function(i){el[i].value=DEF[i]});
+  recEls.forEach(function(e,i){e.value=REC[i]});cur=0;update();
+});
+update();
+</script>
+</body>
+</html>
